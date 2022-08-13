@@ -20,6 +20,6 @@ public class PutConstantToRegister implements Command {
 
     @Override
     public void dump() {
-        System.out.print("put r" + registerNumberToWrite + " " + constant + " ");
+        System.out.print(String.format("put r %10s %5s", registerNumberToWrite, constant));
     }
 }

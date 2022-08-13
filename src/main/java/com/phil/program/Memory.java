@@ -16,7 +16,7 @@ public class Memory {
 
     public static void dump() {
         for (Map.Entry<String, Integer> entry : RAM.entrySet()) {
-            System.out.print("        " + entry.getKey() + " = " + entry.getValue());
+            System.out.print(String.format("%10s = %7s", entry.getKey(), entry.getValue()));
         }
     }
 }

@@ -14,10 +14,10 @@ public class Program {
                 new LtCommand(0),
         };
         Command[] ifClause = {
-                new OutputCommand("Java better then C#")
+                new OutputCommand(String.format("%24s", "Java better then C#"))
         };
         Command[] elseClause = {
-                new OutputCommand("Java better then C# more")
+                new OutputCommand(String.format("%24s","Java better then C# more"))
         };
 
         var commands = new IfCommand(condition, ifClause, elseClause)
@@ -27,7 +27,7 @@ public class Program {
         for (int i = 0; i < commands.size(); i++) {
             var currentCommand = commands.get(i);
             currentCommand.dump();
-            System.out.print("           ");
+            System.out.print(String.format("%10s", " "));
             currentCommand.execute(registers, i);
             RegisterExtensions.dump(registers);
             Memory.dump();

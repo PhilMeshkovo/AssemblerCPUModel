@@ -10,7 +10,7 @@ public abstract class BaseBinaryCommand implements Command {
     }
 
     public void dump() {
-        System.out.print(command + " r" + registerNumberForResult);
+        System.out.print(String.format("%3s r %10s %5s", command, registerNumberForResult, " "));
     }
 
     public void execute(int[] registers, int currentCommandIndex) {

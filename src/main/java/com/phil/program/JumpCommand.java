@@ -10,6 +10,6 @@ public class JumpCommand  implements Command {
 
     @Override
     public void dump() {
-        System.out.print("jmp");
+        System.out.print(String.format("jmp %18s", " "));
     }
 }
